@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: docling-serve
+  labels:
+    app: docling-serve
+spec:
+  to:
+    kind: Service
+    name: docling-serve
+    weight: 100
+  port:
+    targetPort: http
+  tls:
+    termination: edge

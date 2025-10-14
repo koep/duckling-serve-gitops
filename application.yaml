@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: docling-serve
+spec:
+  destination:
+    namespace: ckoep-docling-serve
+    server: https://kubernetes.default.svc
+  source:
+    path: docling-serve
+    repoURL: https://github.com/koep/duckling-serve-gitops.git
+    targetRevision: HEAD
+  sources: []
+  project: default
