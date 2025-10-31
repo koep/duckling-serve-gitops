@@ -6,7 +6,7 @@ metadata:
     app: docling-serve
     component: docling-serve-api
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: docling-serve
